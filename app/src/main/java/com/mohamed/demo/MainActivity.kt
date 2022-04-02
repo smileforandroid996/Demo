@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         val cal = Calendar.getInstance()
 
-
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         val intent1 = Intent(this, BroadReceiver::class.java)
         intent1.putExtra("id", "id")

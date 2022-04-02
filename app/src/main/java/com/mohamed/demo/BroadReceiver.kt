@@ -14,9 +14,9 @@ class BroadReceiver: BroadcastReceiver() {
     val powerManager = context!!.getSystemService(Context.POWER_SERVICE) as PowerManager
     val wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyApp::MyWakelockTag1")
     wakeLock.acquire(10000)
-    val id = intent!!.getIntExtra("id", -1)
+    val id = intent!!.getStringExtra("id")
 
-    Toast.makeText(context, "id.toString()", Toast.LENGTH_LONG).show()
+    Toast.makeText(context, id.toString(), Toast.LENGTH_LONG).show()
 
   }
 
