@@ -10,6 +10,7 @@ import android.os.PowerManager
 import android.provider.Settings
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import java.util.*
 
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         }else{
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, cal.timeInMillis  + (2 * 60 * 1000), pendingIntent)
         }
+
+        Toast.makeText(this, "Done", Toast.LENGTH_LONG).show()
     }
 
 
